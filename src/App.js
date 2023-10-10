@@ -1,121 +1,17 @@
-import Button from "./components/Button";
-import ListItem from "./components/ListItem";
-
-import "./Rail-Link.css";
-
-const rows = [
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-  {
-    title: "Operational Safety and Maintenance",
-    message:
-      "Jack Hedges has completed operational safety and maintenance task",
-    time: "13:45",
-  },
-];
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ButtonPage from "./pages/ButtonPage";
 
 function App() {
   return (
-    <div class="rl-table-audit">
-      <div class="header">
-        <h2>App Activity</h2>
-        <p className="clickable">View All</p>
-      </div>
-      <div class="content rl-greyborder rl-scroll">
-        {rows.map((row) => (
-          <ListItem item={row} />
-        ))}
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/button" element={<ButtonPage />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
-{
-  /* <div className="buttonWrapper">
-        <Button title="Launch" />
-      </div> */
-}
