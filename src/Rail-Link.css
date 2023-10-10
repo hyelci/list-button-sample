@@ -1,0 +1,338 @@
+/**             Root Variables and Properties               **/
+
+/* Standard Page Properties */
+* {
+  font-family: sans-serif;
+}
+
+html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  font-size: 1.6vh;
+  color: var(--rl-primary);
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  flex-direction: column;
+}
+
+/*      Colours     */
+:root {
+  /* Rail-Link Colours */
+  --rl-primary: #122f55;
+  --rl-secondary: #395477;
+  --rl-tertiary: #8fa0b5;
+  --rl-surface: #c6c6c6;
+  --rl-surface-border: #e3e3e3;
+  --rl-surface-light: #efefef;
+  --rl-black: #212121;
+
+  /* Utility Colours */
+  --form-valid: #4b8e64;
+  --form-invalid: #e42c1a;
+  --form-progress: #f6bd22;
+
+  /* Briefing-Module Colours */
+  --brief-primary: #106930;
+  --brief-secondary: #4b8e64;
+  --brief-tertiary: #87b497;
+}
+
+/*      Font  Styles       */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Primary/Page Header */
+h1 {
+  font-family: Nexa;
+  font-size: 48px;
+  font-size: 4.4vh;
+  font-weight: 600;
+  color: var(--rl-primary);
+}
+
+/* Panel Header */
+h2 {
+  font-family: Nexa;
+  font-size: 32px;
+  font-size: 3.2vh;
+  font-weight: 600;
+  color: var(--rl-primary);
+}
+
+/* Panel Sub-Header */
+h3 {
+  font-family: Nexa;
+  font-size: 24px;
+  font-size: 2.4vh;
+  font-weight: 600;
+  color: var(--rl-primary);
+}
+
+/* Side-Panel Header */
+h4 {
+  font-family: Nexa;
+  font-size: 20px;
+  font-size: 2vh;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Side-Panel Sub-Header */
+h5 {
+  font-family: Nexa;
+  font-size: 16px;
+  font-size: 1.6vh;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Table Data / Important Content */
+h6 {
+  font-size: 22px;
+  font-size: 2.2vh;
+  font-weight: 500;
+  color: var(--rl-primary);
+  line-height: 2.2vh;
+}
+
+/*      Unsetting Defaults      */
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+select {
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/**                 Common Styles                   **/
+/*      Utility Classes         */
+.hide {
+  display: none !important;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+body.debug div {
+  box-sizing: border-box;
+  border: 1px dashed green;
+}
+
+/*      Rail-Link Scrollbar      */
+.rl-scroll {
+  padding-right: 10px;
+}
+
+.rl-scroll::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--rl-primary);
+  border: 5px solid white;
+  border-top: 0;
+  border-bottom: 0;
+  margin: 10 5px;
+}
+
+.rl-scroll::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 3px solid var(--rl-primary);
+  border-radius: 6px;
+  border-width: 0.4vh;
+}
+
+/* Grey Border Div */
+.rl-greyborder {
+  box-sizing: border-box;
+  border: 2px solid var(--rl-surface-border);
+  border-width: 0.3vh;
+  border-radius: 20px;
+  border-radius: 1.8vh;
+}
+
+/*          Row Marker          */
+.rl-row-marker {
+  height: 28px;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+
+  border: 8px solid var(--rl-surface-border);
+  border-width: 0.75vh;
+  border-radius: 50%;
+
+  min-height: 18px;
+  max-height: 40px;
+  height: 2.6vh;
+}
+
+@media (min-height: 1100px) {
+  .rl-row-marker {
+    height: 3vh;
+  }
+}
+
+@media (max-height: 1000px) {
+  .rl-select {
+    background-size: 10%;
+    background-position-x: 92%;
+  }
+}
+
+/* Audit Table */
+.rl-table-audit {
+  height: 100%;
+  width: 100%;
+}
+
+.rl-table-audit .header {
+  width: 100%;
+  height: 12%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 17px;
+  font-size: 1.7vh;
+  font-weight: 500;
+}
+
+.rl-table-audit .content {
+  padding: 10px 20px;
+  width: 100%;
+  height: 88%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.rl-table-audit .header p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Audit Row Small */
+.rl-row-audit-small {
+  width: 100%;
+  height: 10%;
+  min-height: 10%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  gap: 24px;
+  margin: 4px;
+  padding: 4px;
+}
+.rl-row-audit-small:hover {
+  border-radius: 16px;
+  border: 2px solid green;
+}
+
+.rl-row-audit-small .marker {
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rl-row-audit-small .message {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rl-row-audit-small .message p {
+  font-size: 17px;
+  font-size: 1.7vh;
+  font-weight: 500;
+  color: var(--rl-tertiary);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.rl-row-audit-small .message h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.rl-row-audit-small .time {
+  height: 100%;
+  width: 15%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 17px;
+  font-size: 1.7vh;
+  font-weight: 500;
+  color: var(--rl-tertiary);
+}
+
+.buttonWrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

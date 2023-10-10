@@ -1,0 +1,47 @@
+.btn {
+  padding: 10px 16px;
+  border-radius: 32px;
+  border: 2px solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  height: 45px;
+  position: relative;
+  font-weight: 600;
+}
+
+.btn-icon {
+  width: 32px;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+
+.rotate {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: 0.5s all;
+}
+
+.btn-icon-move {
+  transition: 0.5s all;
+  left: 60px;
+}
+
+.purple-filling {
+  width: 0px;
+  position: absolute;
+  height: 45px;
+  left: -2px;
+  top: -2px;
+  background-color: purple;
+  border-radius: 12px;
+}
+.purple-filling-active {
+  width: 60px;
+  transition: 0.5s all;
+}

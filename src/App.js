@@ -1,25 +1,121 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./components/Button";
+import ListItem from "./components/ListItem";
+
+import "./Rail-Link.css";
+
+const rows = [
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+  {
+    title: "Operational Safety and Maintenance",
+    message:
+      "Jack Hedges has completed operational safety and maintenance task",
+    time: "13:45",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="rl-table-audit">
+      <div class="header">
+        <h2>App Activity</h2>
+        <p className="clickable">View All</p>
+      </div>
+      <div class="content rl-greyborder rl-scroll">
+        {rows.map((row) => (
+          <ListItem item={row} />
+        ))}
+      </div>
     </div>
   );
 }
 
 export default App;
+
+{
+  /* <div className="buttonWrapper">
+        <Button title="Launch" />
+      </div> */
+}
